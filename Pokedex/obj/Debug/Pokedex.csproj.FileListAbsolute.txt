@@ -8,3 +8,8 @@ C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.GenerateR
 C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.CoreCompileInputs.cache
 C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.exe
 C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.pdb
+C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\dominio.dll
+C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\dominio.pdb
+C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.CopyComplete
+C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\negocio.dll
+C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\negocio.pdb
