@@ -51,5 +51,11 @@ namespace Pokedex
                 pbxPokemon.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            altaPokemon alta = new altaPokemon();
+            alta.ShowDialog();
+        }
     }
 }

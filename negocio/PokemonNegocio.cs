@@ -55,5 +55,32 @@ namespace negocio
             }
             
         }
+
+        public void agregar(Pokemon poke)
+        {
+            //conecta a db
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                //setear consulta
+                datos.setearConsulta("INSERT INTO POKEMONS (Numero,Nombre, Descripcion, Activo, IdTipo, IdDebilidad)values(" + poke.Numero + ",'"+ poke.Nombre +"','" + poke.Descripcion +"',1, @IdTipo, @IdDebilidad)");
+                datos.setearParametro("@idTipo", poke.Tipo.Id);
+                datos.setearParametro("@IdDebilidad", poke.Debilidad.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void modificar(Pokemon modificar)
+        {
+
+        }
     }
 }

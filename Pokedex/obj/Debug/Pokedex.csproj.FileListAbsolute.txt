@@ -13,3 +13,4 @@ C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\dominio.pdb
 C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.CopyComplete
 C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\negocio.dll
 C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\negocio.pdb
+C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.altaPokemon.resources

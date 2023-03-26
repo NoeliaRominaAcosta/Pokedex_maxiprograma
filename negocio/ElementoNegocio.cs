@@ -12,7 +12,7 @@ namespace negocio
         public List<Elemento> listar()
         {
             List<Elemento> lista = new List<Elemento>();
-            AccesoDatos datos = new AccesoDatos(); //objeto
+            AccesoDatos datos = new AccesoDatos(); //objeto 
             try
             {
                 datos.setearConsulta("select Id, Descripcion From ELEMENTOS");
