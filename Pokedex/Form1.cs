@@ -21,14 +21,8 @@ namespace Pokedex
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            PokemonNegocio negocio = new PokemonNegocio();
-            //invoca lectura a db y carga grilla
-            listaPokemon = negocio.Listar(); //datasource recibe origen de datos y lo modela en la tabla
-            //dgvPokemons es la grilla
-            dgvPokemons.DataSource = listaPokemon; // agarra un objeto y enlaza los datos en cada columna
-            dgvPokemons.Columns["UrlImagen"].Visible = false; //oculta la columna
-            cargarImagen(listaPokemon[0].UrlImagen);
 
+            cargar();
 
         }
 
@@ -38,6 +32,24 @@ namespace Pokedex
             cargarImagen(seleccionado.UrlImagen);
 
            
+        }
+        private void cargar()
+        {
+            PokemonNegocio negocio = new PokemonNegocio();
+            try
+            {
+                //invoca lectura a db y carga grilla
+                listaPokemon = negocio.Listar(); //datasource recibe origen de datos y lo modela en la tabla
+                                                 //dgvPokemons es la grilla
+                dgvPokemons.DataSource = listaPokemon; // agarra un objeto y enlaza los datos en cada columna
+                dgvPokemons.Columns["UrlImagen"].Visible = false; //oculta la columna
+                cargarImagen(listaPokemon[0].UrlImagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
         private void cargarImagen(string imagen)
         {
@@ -56,6 +68,7 @@ namespace Pokedex
         {
             altaPokemon alta = new altaPokemon();
             alta.ShowDialog();
+            cargar();
         }
     }
 }

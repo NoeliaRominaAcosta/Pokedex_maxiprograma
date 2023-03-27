@@ -37,7 +37,12 @@ namespace negocio
                     aux.Numero = (int)lector["Numero"]; //devuelve un object porque puede leer cualquier cosa, por eso se castea
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.UrlImagen = (string)lector["UrlImagen"];
+
+                    if (!(lector["UrlImagen"] is DBNull))
+                    {
+                        aux.UrlImagen = (string)lector["UrlImagen"];
+                    }
+
                     aux.Tipo = new Elemento();
                     aux.Tipo.Descripcion = (string)lector["Tipo"]; //tipo es un objeto sin instancia por eso se pone  aux.Tipo = new Elemento();
                     aux.Debilidad = new Elemento();
@@ -63,9 +68,10 @@ namespace negocio
             try
             {
                 //setear consulta
-                datos.setearConsulta("INSERT INTO POKEMONS (Numero,Nombre, Descripcion, Activo, IdTipo, IdDebilidad)values(" + poke.Numero + ",'"+ poke.Nombre +"','" + poke.Descripcion +"',1, @IdTipo, @IdDebilidad)");
+                datos.setearConsulta("INSERT INTO POKEMONS (Numero,Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen)values(" + poke.Numero + ",'"+ poke.Nombre +"','" + poke.Descripcion +"',1, @IdTipo, @IdDebilidad, @UrlImagen)");
                 datos.setearParametro("@idTipo", poke.Tipo.Id);
                 datos.setearParametro("@IdDebilidad", poke.Debilidad.Id);
+                datos.setearParametro("@UrlImagen", poke.UrlImagen);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

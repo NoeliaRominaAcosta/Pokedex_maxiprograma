@@ -34,6 +34,7 @@ namespace Pokedex
                 nuevoPokemon.Descripcion = txtDescripcion.Text;
                 nuevoPokemon.Tipo = (Elemento)cbxTipo.SelectedItem;//me devuelve un objeto, por eso lo casteo
                 nuevoPokemon.Debilidad = (Elemento)cbxDebilidad.SelectedItem;
+                nuevoPokemon.UrlImagen = txtUrlImage.Text;
                 negocio.agregar(nuevoPokemon);
                 MessageBox.Show("Agregado exitosamente");
                 Close(); //vuelve a la ventana del listado
@@ -61,5 +62,24 @@ namespace Pokedex
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtUrlImage_Leave(object sender, EventArgs e)
+        {
+            //carga imagen en tiempo real
+            cargarImagen(txtUrlImage.Text);
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxPokemon.Load(imagen);
+            }
+            catch (Exception)
+            {
+
+                pbxPokemon.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+            }
+        }
+
     }
 }
