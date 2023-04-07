@@ -43,6 +43,7 @@ namespace Pokedex
                                                  //dgvPokemons es la grilla
                 dgvPokemons.DataSource = listaPokemon; // agarra un objeto y enlaza los datos en cada columna
                 dgvPokemons.Columns["UrlImagen"].Visible = false; //oculta la columna
+                dgvPokemons.Columns["Id"].Visible = false;
                 cargarImagen(listaPokemon[0].UrlImagen);
             }
             catch (Exception ex)
@@ -66,9 +67,23 @@ namespace Pokedex
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //llama al constructor vacio
             altaPokemon alta = new altaPokemon();
             alta.ShowDialog();
             cargar();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //le paso por parametro el objeto pokemon a modificar
+            Pokemon seleccionado;
+            seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+            //se lo paso como parametro al constructor de la clase altaPokemon
+            altaPokemon modificar = new altaPokemon(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+        }
+
+       
     }
 }

@@ -38,8 +38,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,6 +63,7 @@
             this.dgvPokemons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPokemons.Size = new System.Drawing.Size(550, 194);
             this.dgvPokemons.TabIndex = 0;
+           
             this.dgvPokemons.SelectionChanged += new System.EventHandler(this.dgvPokemons_SelectionChanged);
             // 
             // pbxPokemon
@@ -101,6 +102,7 @@
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnSuspender
             // 
@@ -156,16 +158,6 @@
             this.panel2.Size = new System.Drawing.Size(210, 112);
             this.panel2.TabIndex = 9;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -177,6 +169,16 @@
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "MENÚ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 

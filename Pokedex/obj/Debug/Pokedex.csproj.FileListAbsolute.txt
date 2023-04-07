@@ -14,3 +14,19 @@ C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.CopyCompl
 C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\negocio.dll
 C:\Users\usuario\source\repos\Pokedex\Pokedex\bin\Debug\negocio.pdb
 C:\Users\usuario\source\repos\Pokedex\Pokedex\obj\Debug\Pokedex.altaPokemon.resources
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\Pokedex.exe.config
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\Pokedex.exe
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\Pokedex.pdb
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\dominio.dll
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\negocio.dll
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\dominio.pdb
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\bin\Debug\negocio.pdb
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.csprojAssemblyReference.cache
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.altaPokemon.resources
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.Form1.resources
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.Properties.Resources.resources
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.csproj.GenerateResource.cache
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.csproj.CoreCompileInputs.cache
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.csproj.CopyComplete
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.exe
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\Pokedex\obj\Debug\Pokedex.pdb

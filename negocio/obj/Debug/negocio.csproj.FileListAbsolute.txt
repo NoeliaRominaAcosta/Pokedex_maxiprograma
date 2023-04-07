@@ -7,3 +7,12 @@ C:\Users\usuario\source\repos\Pokedex\negocio\obj\Debug\negocio.csproj.CoreCompi
 C:\Users\usuario\source\repos\Pokedex\negocio\obj\Debug\negocio.csproj.CopyComplete
 C:\Users\usuario\source\repos\Pokedex\negocio\obj\Debug\negocio.dll
 C:\Users\usuario\source\repos\Pokedex\negocio\obj\Debug\negocio.pdb
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\bin\Debug\negocio.dll
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\bin\Debug\negocio.pdb
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\bin\Debug\dominio.dll
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\bin\Debug\dominio.pdb
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\obj\Debug\negocio.csprojAssemblyReference.cache
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\obj\Debug\negocio.dll
+C:\Users\CONECTIA BA\Desktop\Pokedex_maxiprograma\negocio\obj\Debug\negocio.pdb

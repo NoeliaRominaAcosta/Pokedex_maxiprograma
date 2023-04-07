@@ -19,7 +19,7 @@ namespace negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server= NOELIA; database=POKEDEX_DB; integrated security=true");
+            conexion = new SqlConnection("server= DESKTOP-BEH97V1\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true");
             comando = new SqlCommand();
         }
         public void setearConsulta(string consulta)
