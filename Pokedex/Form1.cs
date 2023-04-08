@@ -84,6 +84,28 @@ namespace Pokedex
             cargar();
         }
 
-       
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            PokemonNegocio negocio = new PokemonNegocio();
+            Pokemon seleccionado;
+            try
+            {
+                //el metodo messabox devuelve un enum dialogresult, lo guardo en una variable. guarda si o no
+                DialogResult respuesta = MessageBox.Show("Seguro que quieres eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    //actualiza grilla
+                    cargar();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
