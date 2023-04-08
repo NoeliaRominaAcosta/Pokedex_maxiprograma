@@ -34,7 +34,7 @@
             this.pbxPokemon = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnSuspender = new System.Windows.Forms.Button();
+            this.btnBaja = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -103,18 +103,19 @@
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnSuspender
+            // btnBaja
             // 
-            this.btnSuspender.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnSuspender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuspender.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuspender.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSuspender.Location = new System.Drawing.Point(3, 110);
-            this.btnSuspender.Name = "btnSuspender";
-            this.btnSuspender.Size = new System.Drawing.Size(199, 45);
-            this.btnSuspender.TabIndex = 6;
-            this.btnSuspender.Text = "Suspender";
-            this.btnSuspender.UseVisualStyleBackColor = false;
+            this.btnBaja.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaja.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaja.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBaja.Location = new System.Drawing.Point(3, 110);
+            this.btnBaja.Name = "btnBaja";
+            this.btnBaja.Size = new System.Drawing.Size(199, 45);
+            this.btnBaja.TabIndex = 6;
+            this.btnBaja.Text = "Dar baja";
+            this.btnBaja.UseVisualStyleBackColor = false;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnEliminar
             // 
@@ -141,7 +142,7 @@
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnModificar);
-            this.panel1.Controls.Add(this.btnSuspender);
+            this.panel1.Controls.Add(this.btnBaja);
             this.panel1.Location = new System.Drawing.Point(0, 111);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -214,7 +215,7 @@
         private System.Windows.Forms.PictureBox pbxPokemon;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnSuspender;
+        private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

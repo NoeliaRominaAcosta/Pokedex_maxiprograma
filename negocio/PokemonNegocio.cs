@@ -21,7 +21,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server=DESKTOP-BEH97V1\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select P.Id, Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad, P.IdTipo, P.IdDebilidad from POKEMONS P,ELEMENTOS E, ELEMENTOS D WHERE E.Id = P.IdTipo AND D.Id = P.IdDebilidad"; //consulta sql
+                comando.CommandText = "Select P.Id, Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad, P.IdTipo, P.IdDebilidad from POKEMONS P,ELEMENTOS E, ELEMENTOS D WHERE E.Id = P.IdTipo AND D.Id = P.IdDebilidad AND P.Activo = 1"; //consulta sql
                 comando.Connection = conexion; //ejecuta el comando en la conexion que establezco
 
                 conexion.Open();
@@ -124,6 +124,22 @@ namespace negocio
                 datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
 
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void suspender(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("update pokemons set Activo = 0 where Id = @id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {

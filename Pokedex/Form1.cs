@@ -86,20 +86,40 @@ namespace Pokedex
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            eliminar();
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+        //false significa que es opcional, si es false sera eliminar logico
+        private void eliminar(bool logico = false)
+        {
             PokemonNegocio negocio = new PokemonNegocio();
             Pokemon seleccionado;
             try
             {
                 //el metodo messabox devuelve un enum dialogresult, lo guardo en una variable. guarda si o no
                 DialogResult respuesta = MessageBox.Show("Seguro que quieres eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
-                    negocio.eliminar(seleccionado.Id);
+
+                    //llamamos a uno u otro dependiendo el valor de la bandera
+                    if (logico)
+                    {
+                        negocio.suspender(seleccionado.Id);
+                    }
+                    else
+                    {
+                        negocio.eliminar(seleccionado.Id);
+                    }
+                    
                     //actualiza grilla
                     cargar();
                 }
-               
+
             }
             catch (Exception ex)
             {
