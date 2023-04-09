@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
 using negocio;
@@ -28,10 +22,14 @@ namespace Pokedex
 
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
         {
-            Pokemon seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem; //devuelve un object, por eso se castea 
-            cargarImagen(seleccionado.UrlImagen);
+            //cuando el indice de la grilla se cambia
+            if(dgvPokemons.CurrentRow != null)
+            {
+                Pokemon seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem; //devuelve un object, por eso se castea 
+                cargarImagen(seleccionado.UrlImagen);
 
-           
+            }
+
         }
         private void cargar()
         {
@@ -42,8 +40,7 @@ namespace Pokedex
                 listaPokemon = negocio.Listar(); //datasource recibe origen de datos y lo modela en la tabla
                                                  //dgvPokemons es la grilla
                 dgvPokemons.DataSource = listaPokemon; // agarra un objeto y enlaza los datos en cada columna
-                dgvPokemons.Columns["UrlImagen"].Visible = false; //oculta la columna
-                dgvPokemons.Columns["Id"].Visible = false;
+                ocultarColumna();
                 cargarImagen(listaPokemon[0].UrlImagen);
             }
             catch (Exception ex)
@@ -51,6 +48,11 @@ namespace Pokedex
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+        private void ocultarColumna()
+        {
+            dgvPokemons.Columns["UrlImagen"].Visible = false; //oculta la columna
+            dgvPokemons.Columns["Id"].Visible = false;
         }
         private void cargarImagen(string imagen)
         {
@@ -127,5 +129,36 @@ namespace Pokedex
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+
+
+            
+        }
+
+        //textchanged  sirve para que se actualice el filtro cada vez que vamos tocando teclas
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Pokemon> listaFiltrada;
+            string filtro = txtFiltro.Text;
+            if (filtro.Length >= 3)
+            //si no hay parametro de busqueda en el txt
+            {
+                //traigo todos los objetos que coincidan y los voy guardando en la lista listaFiltrada 
+                listaFiltrada = listaPokemon.FindAll(x => x.Nombre.ToLower().Contains(filtro.ToLower()) || x.Tipo.Descripcion.ToLower().Contains(filtro.ToLower()));
+                //contains permite que traiga palabras a medias, sin poner el nombre completo.          trae los que son del tipo que estamos pidiendo (planta, fuego, agua)
+            }
+            else
+            {
+                //si no hay filtro, pongo la lista original
+                listaFiltrada = listaPokemon;
+            }
+            //limpio la grilla
+            dgvPokemons.DataSource = null;
+            dgvPokemons.DataSource = listaFiltrada;
+            ocultarColumna();
+        }
+
     }
 }
