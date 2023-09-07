@@ -14,3 +14,5 @@
 
 ![image](https://user-images.githubusercontent.com/99737640/230681632-aa6eb4c7-60ac-4d82-bdf0-5c8468347d7c.png)
 
+[capturas pendientes]
+La aplicación está terminada desde Abril de 2023. 
